@@ -39,14 +39,28 @@
           <input type="radio" wire:model.live="note_type" value="code" class="hidden">
           💻 <span class="text-sm font-medium">Code</span>
         </label>
+        <!-- 🆕 Loại HTML -->
+        <label class="flex items-center gap-2 cursor-pointer px-3 py-2 rounded-md border transition select-none
+            @if($note_type === 'html') bg-blue-600 border-blue-500 text-white shadow 
+            @else bg-[#1e293b] border-gray-700 text-gray-300 hover:bg-[#334155] @endif">
+          <input type="radio" wire:model.live="note_type" value="mixed" class="hidden">
+          🌐 <span class="text-sm font-medium">HTML</span>
+        </label>
       </div>
 
       <!-- Editor -->
       <div class="mt-4">
         @if ($note_type === 'text')
           <livewire:text-editor :content="$note_text" wire:key="text-editor" />
-        @else
+        @elseif ($note_type === 'code')
           <livewire:code-editor :files="$files" wire:key="code-editor" />
+        @elseif ($note_type === 'mixed')
+          <!-- 🆕 Simple HTML textarea -->
+          <textarea
+            wire:model.defer="note_text"
+            class="w-full bg-[#0f172a] border border-gray-700 rounded p-3 text-gray-200 
+                  focus:ring-2 focus:ring-blue-500 outline-none min-h-[220px]"
+            placeholder="Nhập mã HTML tại đây..."></textarea>
         @endif
       </div>
 

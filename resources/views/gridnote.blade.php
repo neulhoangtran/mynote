@@ -37,6 +37,7 @@
     
     <link rel="stylesheet" href="/public/libs/gridstack.css" />
     <script src="/public/libs/gridstack.js"></script>
+    <link href="/public/app.css" rel="stylesheet" />
     @livewireStyles
 </head>
 <body class="dark:bg-darkbg dark:text-darktext min-h-screen flex flex-col font-[Instrument Sans]">

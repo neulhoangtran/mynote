@@ -104,7 +104,7 @@
         }
 
         document.addEventListener('livewire:init', () => {
-            const grid = GridStack.init({ float: false });
+            const grid = GridStack.init({ float: false, cellHeight: 40, margin: 5 });
             Livewire.on('notify', (data) => {
                 alert(data.message || 'Layout saved!');
             });
@@ -125,7 +125,7 @@
                     el.setAttribute('gs-w', n.w ?? 4);
                     el.setAttribute('gs-h', n.h ?? 2);
                     el.innerHTML = `
-                        <div class="group grid-stack-item-content bg-[#1e293b] border border-gray-700 rounded p-3 overflow-auto relative">
+                        <div class="group grid-stack-item-content bg-[#1e293b] border border-gray-700 rounded p-3 overflow-auto relative editor-table">
                             <button 
                                 onclick="deleteNote(${n.id})"
                                 class="absolute top-1 right-1 bg-red-600 hover:bg-red-700 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">

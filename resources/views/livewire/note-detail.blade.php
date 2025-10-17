@@ -1,6 +1,6 @@
 <div>
     @if($show && $note)
-    <div class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-70 z-50" x-on:keydown.escape.window="$wire.close()">
+    <div class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-70 z-50 editor-table" x-on:keydown.escape.window="$wire.close()">
         <div class="bg-[#1e293b] text-gray-200 rounded-lg shadow-lg w-4/5 max-h-[90vh] overflow-y-auto p-6 border border-gray-600 relative">
             
             <!-- Close -->
@@ -9,7 +9,7 @@
 
             <h2 class="text-lg font-semibold mb-4">🗒️ {{ $note->note_title }}</h2>
 
-            @if($note->note_type === 'text')
+            @if($note->note_type === 'text' || $note->note_type === 'mixed')
                 <!-- Note Text -->
                 <div class="prose prose-invert max-w-none">
                     {!! $note->note_text !!}

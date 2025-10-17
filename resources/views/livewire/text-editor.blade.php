@@ -4,11 +4,24 @@
           theme: 'snow',
           placeholder: 'Nhập nội dung...',
           modules: {
+            table: true,
             toolbar: [
-              ['bold', 'italic', 'underline'],
-              ['link', 'image', 'code-block'],
-              [{ 'list': 'ordered' }, { 'list': 'bullet' }],
-              ['clean']
+                ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
+                ['blockquote', 'code-block'],
+                ['link', 'image', 'video', 'formula'],
+
+                [{ 'list': 'ordered'}, { 'list': 'bullet' }, { 'list': 'check' }],
+                [{ 'script': 'sub'}, { 'script': 'super' }],      // superscript/subscript
+                [{ 'indent': '-1'}, { 'indent': '+1' }],          // outdent/indent
+
+                [{ 'size': ['small', false, 'large', 'huge'] }],  // custom dropdown
+                [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+
+                [{ 'color': [] }, { 'background': [] }],          // dropdown with defaults from theme
+                [{ 'font': [] }],
+                [{ 'align': [] }],
+                ['table'] ,
+                ['clean'] 
             ]
           }
         });
@@ -44,6 +57,6 @@
           input.click();
         });
      ">
-  <div x-ref="editor" class="bg-[#0f172a] border border-gray-700 rounded min-h-[220px] text-gray-200"></div>
+  <div x-ref="editor" class="bg-[#0f172a] border border-gray-700 rounded min-h-[220px] text-white"></div>
 </div>
 

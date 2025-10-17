@@ -102,7 +102,7 @@ class GridNote extends Component
             ->toArray();
 
         // 🔹 Lấy các note chưa có trong dashboard
-        $this->availableNotes = \App\Models\Note::where('note_type', 'text')
+        $this->availableNotes = \App\Models\Note::whereIn('note_type', ['text', 'mixed'])
             ->whereNotIn('id', $usedNoteIds)
             ->latest()
             ->get();

@@ -39,6 +39,7 @@ class NoteModal extends Component
 
     public function close()
     {
+        $this->note_id = null;
         $this->show = false;
     }
 
@@ -112,6 +113,7 @@ class NoteModal extends Component
         $this->files = [];
         $this->selectedTags = [];
         $this->keywords = '';
+        $this->note_id = null;
     }
 
     public function loadNote($note)

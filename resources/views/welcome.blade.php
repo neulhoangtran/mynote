@@ -8,6 +8,33 @@
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
 
+    <style>
+        body .ql-editor.ql-blank::before {
+            color: #fff;
+        }
+        body .ql-editor.ql-blank::before {
+            color: #fff;
+        }
+
+        body .ql-snow .ql-stroke {
+            stroke: #fff;
+        }
+
+        body .ql-snow .ql-picker.ql-header .ql-picker-label::before, 
+        body .ql-snow .ql-picker.ql-header .ql-picker-item::before {
+            color: #fff;
+        }
+
+        body .ql-snow .ql-picker-options .ql-picker-item:before {
+            color: #000 !important;
+        }
+        body .ql-snow .ql-fill, .ql-snow .ql-stroke.ql-fill {
+            fill: #fff;
+        }
+        body .ql-snow .ql-icon-picker .ql-picker-item line.ql-stroke {
+            stroke: #444;
+        }
+    </style>
     <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -36,11 +63,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.9/mode/htmlmixed/htmlmixed.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.9/mode/css/css.min.js"></script>
     <!-- QuillJS -->
-    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
-    <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gridstack@9.2.1/dist/gridstack.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/gridstack@9.2.1/dist/gridstack-all.js"></script>
-
+    <link href="/public/libs/quill/quill.snow.css" rel="stylesheet" />
+    <script src="/public/libs/quill/quill.js"></script>
+    <link href="/public/app.css" rel="stylesheet" />
     @livewireStyles
 </head>
 <body class="dark:bg-darkbg dark:text-darktext min-h-screen flex flex-col font-[Instrument Sans]">

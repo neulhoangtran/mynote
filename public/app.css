@@ -1,0 +1,53 @@
+body .ql-editor.ql-blank::before {
+    color: #fff;
+}
+
+body .ql-editor.ql-blank::before {
+    color: #fff;
+}
+
+body .ql-snow .ql-stroke {
+    stroke: #fff;
+}
+
+body .ql-snow .ql-picker.ql-header .ql-picker-label::before,
+body .ql-snow .ql-picker.ql-header .ql-picker-item::before {
+    color: #fff;
+}
+
+body .ql-snow .ql-picker-options .ql-picker-item:before {
+    color: #000 !important;
+}
+
+body .ql-snow .ql-fill,
+.ql-snow .ql-stroke.ql-fill {
+    fill: #fff;
+}
+
+body .ql-snow .ql-icon-picker .ql-picker-item line.ql-stroke {
+    stroke: #444;
+}
+
+.editor-table table td {
+    min-width: 50px;
+    padding: 1px 15px;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
