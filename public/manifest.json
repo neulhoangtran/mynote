@@ -1,0 +1,17 @@
+{
+    "name": "MyNote",
+    "short_name": "Note",
+    "start_url": "/index.php",
+    "background_color": "#0f172a",
+    "description": "MyNote",
+    "display": "fullscreen",
+    "theme_color": "#0f172a",
+    "icons": [
+        {
+            "src": "logo.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ]
+}
